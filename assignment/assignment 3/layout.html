@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            border: 1px solid red; 
+            height: 685px;           
+            width: 685px;
+            position: relative;
+            margin:36.5px;
+         }
+         .box2{
+            border: 1px solid blue; 
+            height: 585px;           
+            width: 585px;
+            position: relative;
+            margin:36.5px;
+         }.box3{
+            border: 1px solid green; 
+            height: 485px;           
+            width: 485px;
+            position: relative;
+            margin:36.5px;
+
+         }.box4{
+            border: 1px solid black; 
+            height: 385px;           
+            width: 385px;
+            position: relative;
+            margin:36.5px;
+         }.box5{
+            border: 1px solid purple; 
+            height: 285px;           
+            width: 285px;
+            position: relative;
+            margin:36.5px;
+         }
+
+         .sq{
+            border: 5px  solid black;
+            border-radius: 100% ;
+            position: absolute;
+            display: inline-block;
+         }
+         
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="sq" style="top: 0px;left:0px; "></div>
+        <div class="sq"style="right:0px;bottom:0px;"></div>
+        <div class="box2">
+            <div class="sq" style="top: 0px;left:0px; "></div>
+            <div class="sq" style="right:0px;bottom:0px;"></div>
+            <div class="box3">
+                    <div class="sq" style="right:0px;bottom:0px;"></div>
+                <div class="sq" style="top: 0px;left:0px; "></div>
+                <div class="box4">
+                    <div class="sq" style="right:0px;bottom:0px;"></div>
+                    <div class="sq" style="top: 0px;left:0px; "></div>
+                    <div class="box5">
+                        <div class="sq" style="top: 0px;left:0px; "></div>
+                        <div class="sq" style="right:0px;bottom:0px;"></div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
