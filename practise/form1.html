@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover and back</title>
+    <style>
+        .class1{
+            position: absolute;
+            background-color: red;
+            height: 200px;
+            width: 200px;
+        }
+        .class2{
+            position: absolute;
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+            top: 50px;
+            left: 50px;
+        }
+        .class3{
+            position: absolute;
+            background-color: yellow;
+            height: 200px;
+            width: 200px;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="class1"  onmouseover="change(this)" onmouseleave="def(this)"></div>
+    <div class="class2"  onmouseover="change(this)" onmouseleave="def(this)"></div>
+    <div class="class3"  onmouseover="change(this)" onmouseleave="def(this)"></div>
+    <script>
+        var col;
+        function change(el){
+            col = el.style.backgroundColor;
+            el.style.backgroundColor = "aqua";
+        }
+        function def(el){
+            el.style.backgroundColor = col;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <style>
+        input{
+            position: relative;
+            left: 100px;
+        }
+        #username{
+            left: 75px;
+        }
+        #password{
+            left: 79px;
+        }
+        #email{
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form action="process.html">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <br><br><br><br>
+    </div>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+        <br><br><br><br>
+    </div>
+    <div>
+        <label for="password">password:</label>
+        <input type="password" id="password"></label>
+        <br><br><br><br>
+    </div>
+    <div>
+        <label for="email">Email: </label>
+        <input type="email" id="email" >
+        <br><br><br><br>
+    </div>
+    <div>
+        <button id="submit">Submit</button>
+        <br>
+    </div>
+    <script> 
+       const nameEl = document.getElementById("name");
+       const unameEl = document.getElementById("username");
+       const passwordEl = document.getElementById("password");
+       const emailEl = document.getElementById("email");
+       document.getElementById("submit").addEventListener("click",send,true);
+       function send(e){
+      
+       if(nameEl.value == ""){
+        e.preventDefault();
+        alert("no name")
+       }
+       if(unameEl.value == ""){
+        e.preventDefault();
+        alert("no username");
+       }
+       let paslen = passwordEl.value;
+       let passwordlength = paslen.length;
+       console.log(passwordlength);
+       if(passwordEl.value == ""){
+        e.preventDefault();
+        alert("mo password")
+       }else if(passwordlength < 5){
+        e.preventDefault();
+        alert("password is too short")
+       }
+       
+       
+       if(emailEl.value == ""){
+        e.preventDefault();
+        alert("NO email")
+       }
+    }
+
+    </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .space{
+            position: relative;
+            top: 100px;            
+            left: 100px;
+        }
+        #name{
+            position: relative;
+            left: 100px;
+        }
+        #username{
+            position: relative;
+            left: 73.5px;
+            top: px;
+        }
+        #password{
+            position: relative;
+            left: 77px;
+        }
+        #email{
+            position: relative;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="space">
+    <div>
+    <label for="name">Name</label>
+    <input type="text" placeholder="Enter your name" id ="name">
+    </div>
+    <div>
+    <label for="username">Username</label>
+    <input type="text" placeholder="Enter your username" id ="username">
+</div>
+<div>
+    <label for="password">Password</label>
+    <input type="password" placeholder="Enter your password" id ="password">
+</div>
+<div>
+    <label for="email">Email</label>
+    <input type="text" placeholder="Enter your email" id ="email">
+</div>
+<div>
+    <input type="submit" id="submit">
+</div>
+</div>
+<script>
+    const nameEl = document.getElementById("name");
+    const usernameEl = document.getElementById("useranme");
+    const passwordEl = document.getElementById("password");
+    const emailEl = document.getElementById("email");
+
+
+    document.getElementById("submit").addEventListener("click",data,true);
+    function data(){
+        element = nameEl.value;
+        if(element == ""){
+            alert("not valid")
+        }
+    }
+
+</script>
+</body>
+</html>

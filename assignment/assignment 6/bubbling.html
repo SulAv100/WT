@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        body {
+            padding: 20px;
+            background-color: beige;
+            }
+
+        div {
+            padding: 20px;
+            background-color: grey;
+            width: max-content;
+            }
+
+        span {
+            display: block;
+            padding: 20px;
+            background-color: black;
+            }
+    </style>
+    
+</head>
+<body id="body">
+  <div id="div">
+    <span id="span">
+      <button id="button">Click Me!</button>
+    </span>
+  </div>
+
+  <script>
+    const body = document.getElementById("body");
+    const div = document.getElementById("div");
+    const span = document.getElementById("span");
+    const button = document.getElementById("button");
+    
+    body.addEventListener('click', event => {
+        console.log("body was clicked")
+    })
+    
+    div.addEventListener('click', event => {
+        console.log("div was clicked")
+    })
+    
+    span.addEventListener('click', (event) => {
+        console.log("span was clicked")
+    })
+    
+    button.addEventListener('click', (event) => {
+        console.log("button was clicked")
+})
+</script>
+</body>
+</html>

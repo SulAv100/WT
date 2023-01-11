@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        div{
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            border: 2px solid palevioletred;
-            margin: auto;
-        }
-    </style>
+    <title>Dynamic content</title>
 </head>
 <body>
-    <div>
-      <p></p>
-    </div>
+    <input  id="none"  type="text" placeholder="Add content here">
+    <br>
+    <button id="add-btn">Add</button>
+    <h1>Content here</h1>
+    <p id="display"></p>
+    <script type="text/javascript">
+        document.getElementById("add-btn").addEventListener("click",function(event){
+            event.preventDefault();
+            element = document.getElementById("none").value;
+            document.getElementById("display").innerText = "element";
+        })
+    </script>
 </body>
 </html>

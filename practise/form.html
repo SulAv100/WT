@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form handeling</title>
+</head>
+<body>
+    <!-- form handeling -->
+    <form action="process.html" method="POST" onsubmit="validateForm" id="search-form">
+    <input type="text" name="search" id="search" placeholder="search-text">
+<input type="submit" value="OK">    
+ </form>
+ <script>
+    document.getElementById("search-form").addEventListener("submit", function(event){
+        event.preventDefault();
+        if(document.getElementById("search").value == ""){
+            alert("Empty input")
+        }else{
+            event.currentTarget.submit();
+        }
+    })
+ </script>
+    
+</body>
+</html>

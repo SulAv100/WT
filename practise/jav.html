@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 360px;
+        height: 360px;
+    }
+    #ok{
+            position: absolute;
+            background-color: red;
+            
+        }
+        #notok{
+            
+            position: absolute;
+            background-color: blue;
+            margin: 40px 40px;
+        }
+        #justok{
+            position: absolute;
+            background-color: yellow;   
+            margin: 80px 80px;
+        }
+</style>
+<body>
+    <div id="ok" onmouseover="change(this)" onmouseleave="def(this)"></div>
+    <div id="notok" onmouseover="change(this)" onmouseleave="def(this)"></div>
+    <div id="justok" onmouseover="change(this)" onmouseleave="def(this)"></div>
+    <script type="text/javascript">
+        // var count = 1;
+        // var red = document.getElementById("ok")
+        // var blue = document.getElementById("notok")
+        // var yellow = document.getElementById("justok")
+        // Array.from(document.getElementsByTagName("div")).forEach(
+        //     function(){
+        //         addEventListener("click",change(el))
+        //     }
+        // )
+
+        // document.getElementById("ok").addEventListener("mouseover",function(){
+        //     console.log(document.getElementById("ok").style.backgroundColor)
+        // })
+        var col; 
+        function change(el){
+            col=el.style.backgroundColor;
+            siz=el.style.padding;
+            el.style.backgroundColor="beige";
+            el.style.padding="50px";
+        }
+        function def(el){
+            el.style.backgroundColor=col;
+            el.style.padding=siz;
+        }
+
+    </script>
+    
+</body>
+</html>

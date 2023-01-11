@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+        #ok{
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            background-color: red;
+            
+        }
+        #notok{
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            background-color: blue;
+            margin: 40px 40px;
+        }
+        #justok{
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            background-color: yellow;   
+            margin: 80px 80px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div id="ok"></div>
+    <div id="notok"></div>
+    <div id="justok"></div>
+
+    <script>
+      let number = 1;
+      
+      var red = document.querySelector('#ok');
+      var green = document.querySelector('#notok');
+      var blue = document.querySelector('#justok');
+
+      red.addEventListener('click', function() {
+        this.style.zIndex = ++counter;
+      });
+
+      green.addEventListener('click', function() {
+        this.style.zIndex = ++counter;
+      });
+
+      blue.addEventListener('click', function() {
+        this.style.zIndex = ++counter;
+      });
+
+    </script>
+  </body>
+</html>

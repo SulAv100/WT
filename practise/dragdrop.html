@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drag and drop</title>
+</head>
+<body>
+    <span style="position: absolute; top: 200px; left: 200px; background-color: blue;">Alucard</span>
+    <span style="position: absolute; top: 200px; left: 260px; background-color: blue;">Alucard</span>
+    <span style="position: absolute; top: 200px; left: 330px; background-color: blue;">Alucard</span>
+    <span style="position: absolute; top: 200px; left: 410px; background-color: blue;">Alucard</span>
+    <script>
+        const drag = document.querySelectorAll("span");
+        for(el of drag){
+            el.addEventListener("mousedown",dragstart,true);
+        }
+        function dragstart(event){
+            ok = event.currentTarget;
+            console.log("Trigered");
+            document.addEventListener("mousemove",mover,true);
+            document.addEventListener("mouseup",dropper,true);
+        }
+        function mover(event){
+            ok.style.top = event.clientY +"px";
+            ok.style.left = event.clientX +"px";
+        }
+        function dropper(event){
+            document.removeEventListener("mousemove",mover,true)
+            document.removeEventListener("mouseup",dropper,true)
+        }
+    </script>
+
+</body>
+</html>
