@@ -29,13 +29,13 @@
         <br><br><br><br>
     </div>
     <div>
-        <label for="username">Username:</label>
-        <input type="text" id="username">
+        <label for="contact">COntact:</label>
+        <input type="number" id="number">
         <br><br><br><br>
     </div>
     <div>
-        <label for="password">password:</label>
-        <input type="password" id="password"></label>
+        <label for="country">Country:</label>
+        <input type="text" id="country"></label>
         <br><br><br><br>
     </div>
     <div>
@@ -49,8 +49,8 @@
     </div>
     <script> 
        const nameEl = document.getElementById("name");
-       const unameEl = document.getElementById("username");
-       const passwordEl = document.getElementById("password");
+       const unameEl = document.getElementById("number");
+       const passwordEl = document.getElementById("country");
        const emailEl = document.getElementById("email");
        document.getElementById("submit").addEventListener("click",send,true);
        function send(e){
@@ -63,18 +63,10 @@
         e.preventDefault();
         alert("no username");
        }
-       let paslen = passwordEl.value;
-       let passwordlength = paslen.length;
-       console.log(passwordlength);
-       if(passwordEl.value == ""){
+       if( passwordEl.value == ""){
         e.preventDefault();
-        alert("mo password")
-       }else if(passwordlength < 5){
-        e.preventDefault();
-        alert("password is too short")
+        alert("Empty country")
        }
-       
-       
        if(emailEl.value == ""){
         e.preventDefault();
         alert("NO email")
