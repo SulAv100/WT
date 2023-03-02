@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="dragdrop.html" method="post">
+    <label for="name">Name : </label>
+    <input type="text" placeholder="Enter your name" id="name">
+    <br><br><br><br>
+    <label for="age">Age : </label>
+    <input type="number" placeholder="ENter your age" id="age">
+    <br><br><br><br>
+    <label for="email">Email : </label>
+    <input type="email" placeholder="Enter you mail" id="email">
+    <br><br><br><br>
+    <button id="btn">Submit</button>
+    <script>
+        nameEl = document.getElementById("name");
+        ageEl = document.getElementById("name");
+        emailEl = document.getElementById("name");
+        document.getElementById("btn").addEventListener("click", submit,true);
+        function submit(e){
+            if(nameEl.value =""){
+                e.preventDefault();
+                alert("Its empty")
+            }
+            if(ageEl.value =""){
+                e.preventDefault();
+                alert("Its empty")
+            }
+            if(emailEl.value =""){
+                e.preventDefault();
+                alert("Its empty")
+            }
+        }
+    </script>
+</form>
+</body>
+</html>
+<!-- INSERT INTO `login` (`S no`, `Name`, `Age`, `Email`) VALUES ('1', 'Sulav Gautam', '20', 'this@this.com'); -->
