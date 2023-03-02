@@ -9,11 +9,11 @@ if(isset($_POST['submit'])){
    $password = $_POST['password'];
    $cpassword = $_POST['cpassword'];
 
-   // Check if the email is valid
+
    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $error[] = 'Invalid email format';
    } else {
-      // Check if the email already exists in the database
+      
       $select = "SELECT * FROM user_form WHERE email = ?";
       $stmt = $conn->prepare($select);
       $stmt->bind_param("s", $email);
@@ -128,8 +128,8 @@ if(isset($_POST['submit'])){
    border: none;
    border-radius: 5px;
    background-color: #5F9EA0;
-  background-color: #ff6600; /* change to your desired color */
-  color: #fff; /* change to your desired text color */
+  background-color: #ff6600; 
+  color: #fff; 
    font-size: 18px;
    cursor: pointer;
    transition: all 0.3s ease;
@@ -197,14 +197,15 @@ if(isset($_POST['submit'])){
 
 </div>
 <script>
+   
    const formContainer = document.querySelector('.form-container');
 const emailField = document.querySelector('input[name="usermail"]');
 const passwordField = document.querySelector('input[name="password"]');
 const cPasswordField = document.querySelector('input[name="cpassword"]');
 
-// Add event listener to the submit button
+
 document.querySelector('.form-btn').addEventListener('click', (e) => {
-  // Check if email is valid
+ 
   if (!emailField.checkValidity()) {
     e.preventDefault();
     emailField.classList.add('shake');
@@ -213,7 +214,7 @@ document.querySelector('.form-btn').addEventListener('click', (e) => {
     }, 500);
   }
   
-  // Check if password and confirm password match
+  
   if (passwordField.value !== cPasswordField.value) {
     e.preventDefault();
     passwordField.classList.add('shake');
